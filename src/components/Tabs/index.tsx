@@ -9,7 +9,7 @@ export function HeaderTabs() {
 
     return(
         <Tabs.Root value={currentTab} onValueChange={setCurrentTab}>
-            <Tabs.List className='flex flex-row gap-5'>
+            <Tabs.List className='flex flex-col lg:flex-row gap-5'>
                 <TabItem value={'initial'} name={'Inicial'} isSelected={currentTab === 'initial'}/>
                 <TabItem value={'project'} name={'Projetos'} isSelected={currentTab === 'project'}/>
                 <TabItem value={'skils'} name={'Habilidades'} isSelected={currentTab === 'skils'}/>
