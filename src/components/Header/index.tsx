@@ -19,12 +19,14 @@ interface HeaderTabsProps {
 export function Header(props : HeaderTabsProps) {
     
     return(
-        <Collapsible.Root className="flex bg-zinc-100 dark:bg-zinc-800 border-b border-zinc-300 h-14 p-6">
+        <Collapsible.Root className="flex bg-zinc-100 dark:bg-zinc-800 border-b border-zinc-300 h-14 p-6 mb-10">
 
             <div className="flex items-center justify-between w-full lg:justify-start lg:w-48">
                 <h1 className="font-extrabold text-2xl dark:text-zinc-100 w-[200px]">Vitor Medina</h1>
-                <Collapsible.Trigger asChild className="cursor-pointer lg:hidden w-16 h-16 bg-red-600">
-                    <Menu className="text-zinc-800 dark:text-zinc-100 h-6 w-6"/>
+                <Collapsible.Trigger asChild className="lg:hidden">
+                    <button className="rounded-full w-[25px] h-[25px] bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center">
+                        <Menu className="text-zinc-100 dark:text-zinc-900 h-4 w-4"/>
+                    </button>
                 </Collapsible.Trigger>
             </div>
 
@@ -38,15 +40,6 @@ export function Header(props : HeaderTabsProps) {
                     <Link href="https://github.com//VitorNasBr">
                         <Image src="/github.png" alt="" width={30} height={30}/>
                     </Link>
-
-                    <button>
-                        <Image src="/BrazilFlag.png" alt="" width={30} height={30}/>
-                    </button>
-
-                    <button>
-                        <Image src="/UnitedStatesFlag.png" alt="" width={35} height={35}/>
-                    </button>
-
                     <SwitchTheme />
                 </div>
                 <Collapsible.Trigger className="data-[state=closed]:hidden">
